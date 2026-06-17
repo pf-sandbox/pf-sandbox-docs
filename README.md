@@ -22,15 +22,33 @@ You can switch to the new instructions to trade coins paired with both SOL and U
 
 The first feature we are looking to support with the new interface is the addition of USDC as a quote asset for meme coins.
 
+## Agent Trading Modes
+
+The Mayhem Mode agent can operate in two modes:
+
+### Auto Mode
+- **Self-exciting trade cadence** — the more you trade, the more activity from the agent
+- Agent buys and sells at random with different trade sizes
+- Agent trades for 24 hours as long as there's enough liquidity
+
+### Manual Mode
+- **Creator in control** — agent only trades when prompted by the coin creator
+- Same trade direction and sizes as Auto: random
+- Have the agent trade once, or not at all
+
+### Agent Lifecycle
+
+- **Active**: Agent online and trading in auto or manual mode
+- **Paused**: Liquidity or marketcap too low. Top up or start fresh with a new coin
+- **Complete**: Agent will no longer trade on this coin. Relaunch to go again
+
 ## Quick Links
 
 - [Getting Started](docs/SANDBOX_GETTING_STARTED.md)
 - [Mayhem Mode](docs/SANDBOX_MAYHEM_MODE.md)
-- [Havoc](docs/SANDBOX_HAVOC.md)
 
 ## What's Coming
 
-- [ ] Havoc distributed wallet strategies
 - [ ] Advanced account derivation patterns
 - [ ] Custom liquidity amplification scenarios
 - [ ] Batch operations examples
